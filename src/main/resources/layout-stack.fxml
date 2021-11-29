@@ -1,0 +1,17 @@
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<StackPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.sarbr.javafx.controller.DefController">
+    <Rectangle width="300" height="200" fill="#202e80">
+    </Rectangle>
+    <Label>
+        <text>Hello There!</text>
+        <textFill>white</textFill>
+        <font>
+            <Font name="Arial" size="24"/>
+        </font>
+    </Label>
+    <Button text="back" onAction="#onMain"/>
+</StackPane>

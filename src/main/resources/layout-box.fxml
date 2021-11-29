@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+
+<FlowPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="com.sarbr.javafx.controller.DefController">
+   <children>
+      <TabPane prefHeight="400.0" prefWidth="450.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="VBox">
+              <VBox alignment="center" spacing="15">
+                  <padding>
+                      <Insets bottom="40" left="40" right="40" top="40" />
+                  </padding>
+                  <children>
+                      <Button>Item 1</Button>
+                      <Button>Item 2</Button>
+                      <Button>Item 3</Button>
+                      <Button>Item 4</Button>
+                  </children>
+              </VBox>
+          </Tab>
+          <Tab text="HBox">
+              <HBox alignment="center" spacing="10">
+                  <padding>
+                      <Insets bottom="20" left="40" right="40" top="20" />
+                  </padding>
+                  <children>
+                      <Button>
+                          Item 1
+                      </Button>
+                      <Button>
+                          Item 2
+                      </Button>
+                      <Button>
+                          Item 3
+                      </Button>
+                      <Button>
+                          Item 4
+                      </Button>
+                  </children>
+              </HBox>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+    <Button onAction="#onMain" text="back" />
+</FlowPane>

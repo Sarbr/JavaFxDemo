@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import java.lang.*?>
+<FlowPane alignment="center" hgap="5" vgap="5" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="com.sarbr.javafx.controller.MainController">
+       <HBox fx:id="hbType" prefHeight="40" prefWidth="400">
+          <children>
+              <Label prefHeight="40" prefWidth="120">
+                  <font>
+                      <Font name="Arial" size="20" />
+                  </font>
+                  选择模板:
+              </Label>
+              <ComboBox fx:id="comboBox" layoutX="148.0" layoutY="468.0" prefHeight="36.0" prefWidth="323.0">
+                  <items>
+                      <FXCollections fx:factory="observableArrayList">
+                          <String fx:value="hello" />
+                          <String fx:value="css" />
+                          <String fx:value="registration" />
+                          <String fx:value="toolbar" />
+                          <String fx:value="layout" />
+                          <String fx:value="layout-panes" />
+                          <String fx:value="layout-box" />
+                          <String fx:value="layout-stack" />
+                      </FXCollections>
+                  </items>
+                  <value>
+                      <String fx:value="hello" />
+                  </value>
+              </ComboBox>
+          </children>
+       </HBox>
+       <Button fx:id="btnLogin" onAction="#onHelloButtonClick" prefHeight="40" prefWidth="400" text="确定" />
+</FlowPane>

@@ -1,0 +1,53 @@
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import java.net.URL?>
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.sarbr.javafx.controller.MainController">
+    <top>
+        <BorderPane styleClass="header-section">
+            <left>
+                <Label id="header-text" text="应用标题"/>
+            </left>
+            <right>
+                <Button id="account" text="账号">
+                    <graphic>
+                        <ImageView fitHeight="24" fitWidth="24" pickOnBounds="true" preserveRatio="true">
+                            <Image url="@img/javafx_account_example.png"/>
+                        </ImageView>
+                    </graphic>
+                </Button>
+            </right>
+        </BorderPane>
+    </top>
+    <left>
+        <VBox styleClass="sidebar-section">
+            <Label text="Sidebar Item1"/>
+            <Label text="Sidebar Item2"/>
+            <Label text="Sidebar Item3"/>
+            <Label text="Sidebar Item4"/>
+        </VBox>
+    </left>
+    <center>
+        <VBox styleClass="content-section">
+                <Label id="content-header" text="内容标题"/>
+                <Label id="content">
+                        Lorem Ipsum 只是印刷和排版行业的虚拟文本。自 1500 年代以来，Lorem Ipsum 一直是行业标准的虚拟文本，当时一位不知名的印刷商使用了一个类型的厨房，并争先恐后地制作了一本类型样本书。它不仅存活了五个世纪，而且还经历了电子排版的飞跃，基本保持不变。它在 1960 年代随着包含 Lorem Ipsum 段落的 Letraset 表的发布而流行，最近随着桌面出版软件 Aldus PageMaker 的发布，包括 Lorem Ipsum 的版本。
+                </Label>
+        </VBox>
+    </center>
+    <bottom>
+        <HBox id="footer-section">
+            <Label>
+                Copyright 2017 CalliCoder
+            </Label>
+            <Button text="back" onAction="#onMain"/>
+        </HBox>
+    </bottom>
+    <stylesheets>
+        <URL value="@css/css.css"/>
+    </stylesheets>
+</BorderPane>
