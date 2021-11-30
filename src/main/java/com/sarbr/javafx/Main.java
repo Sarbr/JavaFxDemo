@@ -8,6 +8,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.stage.Stage;
 import javafx.stage.Window;
+import org.kordamp.bootstrapfx.BootstrapFX;
 
 import java.io.IOException;
 import java.net.URL;
@@ -20,7 +21,11 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         scene = new Scene(loadFXML("main.fxml"), 800, 450);
+        scene.getStylesheets().add(
+                BootstrapFX.bootstrapFXStylesheet()
+        );
         stage.setTitle("Hello!");
+        stage.setIconified(true);
         stage.setScene(scene);
         stage.show();
     }
@@ -35,13 +40,13 @@ public class Main extends Application {
 
     public static  URL getURL(String file) {
         final URL url = ClassLoader.getSystemResource(file);
-        if(Objects.nonNull(url)){
-            return url;
+        if (Objects.isNull(url)) {
+            final Window window = scene.getWindow();
+            AlertHelper.showAlert(Alert.AlertType.ERROR, window, file,
+                    "未找到文件!");
+            throw new NullPointerException("未找到文件:" + file);
         }
-        final Window window = scene.getWindow();
-        AlertHelper.showAlert(Alert.AlertType.CONFIRMATION, window, file,
-                "未找到文件!");
-        throw new NullPointerException("未找到文件:" + file);
+        return url;
     }
 
     public static void main(String[] args) {
